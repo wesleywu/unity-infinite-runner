@@ -10,8 +10,8 @@ public class PlayerStats : RealmObject {
 
     public PlayerStats() {}
 
-    public PlayerStats(string Username) {
-        this.Username = Username;
+    public PlayerStats(string username) {
+        this.Username = username;
     }
 
 }

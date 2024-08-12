@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,11 +12,11 @@ public class ObjectPool : MonoBehaviour
     public GameObject cakeToPool;
     public int amountToPool;
 
-    void Awake() {
+    private void Awake() {
         SharedInstance = this;
     }
 
-    void Start() {
+    private void Start() {
         pooledObstacles = new List<GameObject>();
         pooledCake = new List<GameObject>();
         GameObject tmpObstacle;
@@ -50,6 +49,6 @@ public class ObjectPool : MonoBehaviour
         return null;
     }
 
-    void Update() { }
+    private void Update() { }
     
 }
