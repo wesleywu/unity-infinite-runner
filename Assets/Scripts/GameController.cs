@@ -10,9 +10,9 @@ public class GameController : MonoBehaviour
     public float cakeTimer = 1;
     public float timeUntilCake = 1;
 
-    private void Start() { }
+    void Start() { }
 
-    private void Update()
+    void Update()
     {
         timeUntilObstacle -= Time.deltaTime;
         timeUntilCake -= Time.deltaTime;

@@ -12,11 +12,11 @@ public class ObjectPool : MonoBehaviour
     public GameObject cakeToPool;
     public int amountToPool;
 
-    private void Awake() {
+    void Awake() {
         SharedInstance = this;
     }
 
-    private void Start() {
+    void Start() {
         pooledObstacles = new List<GameObject>();
         pooledCake = new List<GameObject>();
         GameObject tmpObstacle;
@@ -49,6 +49,6 @@ public class ObjectPool : MonoBehaviour
         return null;
     }
 
-    private void Update() { }
+    void Update() { }
     
 }

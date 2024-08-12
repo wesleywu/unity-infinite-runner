@@ -9,9 +9,9 @@ public class Player : MonoBehaviour
     public float movementSpeed;
     public Score score;
 
-    private void Start() { }
+    void Start() { }
 
-    private void Update() {
+    void Update() {
         if(Input.GetKey(KeyCode.LeftArrow)) {
             transform.position += Vector3.left * (movementSpeed * Time.deltaTime);
         } else if(Input.GetKey(KeyCode.RightArrow)) {
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider) {
+    void OnTriggerEnter2D(Collider2D collider) {
         if(collider.gameObject.CompareTag("Obstacle")) {
             score.CalculateHighScore();
             score.ResetCakes();

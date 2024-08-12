@@ -11,7 +11,7 @@ public class Score : MonoBehaviour {
     public Text currentScoreText;
     public Text cakeText;
 
-    private void Start() {
+    void Start() {
         _realm = Realm.GetInstance();
         _playerStats = _realm.Find<PlayerStats>("nraboy");
         if(_playerStats is null) {
@@ -25,11 +25,11 @@ public class Score : MonoBehaviour {
         highScoreText.text = "HIGH SCORE: " + _playerStats.Score.ToString();
     }
 
-    private void OnDisable() {
+    void OnDisable() {
         _realm.Dispose();
     }
 
-    private void Update() {
+    void Update() {
         currentScoreText.text = "SCORE: " + (Mathf.Floor(Time.timeSinceLevelLoad) + _playerStats.Cake);
         cakeText.text = "CAKE: " + _playerStats.Cake.ToString();
     }
